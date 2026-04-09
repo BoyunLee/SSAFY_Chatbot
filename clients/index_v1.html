@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SSAFY AI 챗봇</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="header">
+            <span>SSAFY 규정 봇</span>
+            <button class="upload-btn" onclick="toggleUpload()">문서 추가</button>
+        </div>
+
+        <!-- 업로드 패널 (숨김 상태) -->
+        <div id="upload-panel" class="upload-panel hidden">
+            <div class="upload-content">
+                <p>새 문서를 업로드하면 챗봇이 해당 내용도 학습합니다.</p>
+                <p class="file-types">지원 형식: .txt, .md, .pdf</p>
+                <input type="file" id="file-input" accept=".txt,.md,.pdf">
+                <button>업로드</button>
+            </div>
+        </div>
+
+        <div id="chat-window" class="chat-window">
+            <div class="message bot">안녕하세요! 궁금한 점을 물어보세요.</div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="질문을 입력하세요...">
+            <button onclick="sendMessage()">전송</button>
+        </div>
+    </div>
+
+    <script src="script_v1.js"></script>
+</body>
+
+</html>
